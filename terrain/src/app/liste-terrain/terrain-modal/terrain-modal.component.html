@@ -1,0 +1,11 @@
+<div *ngIf="showModal" class="modal-backdrop">
+  <div class="modal-content">
+    <h4>Détails du Terrain</h4>
+    <p><strong>Nom:</strong> {{ terrain.name }}</p>
+    <p><strong>Localisation:</strong> {{ terrain.location }}</p>
+    <p><strong>Capacité:</strong> {{ terrain.capacity }}</p>
+    <p><strong>Humidité du sol:</strong> {{ terrain.soil_moisture }}%</p>
+    <p><strong>Accessibilité:</strong> {{ getAccessibilityMessage() }}</p>
+    <button class="btn btn-secondary" (click)="closeModal()">Fermer</button>
+  </div>
+</div>

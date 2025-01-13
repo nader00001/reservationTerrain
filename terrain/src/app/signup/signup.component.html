@@ -1,0 +1,67 @@
+<form (ngSubmit)="onSubmit()" class="signup-form">
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input
+      type="email"
+      id="email"
+      [(ngModel)]="signupRequest.email"
+      name="email"
+      required
+      class="form-control"
+      placeholder="Enter your email">
+  </div>
+
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input
+      type="password"
+      id="password"
+      [(ngModel)]="signupRequest.password"
+      name="password"
+      required
+      class="form-control"
+      placeholder="Enter your password">
+  </div>
+
+  <div class="form-group">
+    <label for="firstName">First Name</label>
+    <input
+      type="text"
+      id="firstName"
+      [(ngModel)]="signupRequest.nom"
+      name="firstName"
+      required
+      class="form-control"
+      placeholder="Enter your first name">
+  </div>
+
+  <div class="form-group">
+    <label for="lastName">Last Name</label>
+    <input
+      type="text"
+      id="lastName"
+      [(ngModel)]="signupRequest.prenom"
+      name="lastName"
+      required
+      class="form-control"
+      placeholder="Enter your last name">
+  </div>
+
+  <div class="form-group">
+    <label for="role">Role</label>
+    <select
+      id="role"
+      [(ngModel)]="signupRequest.role"
+      name="role"
+      required
+      class="form-control">
+      <option value="USER">User</option>
+      <option value="ADMIN">Admin</option>
+      <option value="Technique">Technique</option>
+    </select>
+  </div>
+
+  <button type="submit" class="submit-btn">Sign Up</button>
+
+  <p class="text-center">Already have an account? <a routerLink="/login">Log In</a></p>
+</form>

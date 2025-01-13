@@ -1,0 +1,69 @@
+/* Fond léger */
+body, html {
+  background-color: #f7f9fc;
+}
+
+/* Style global */
+.container-fluid {
+  padding: 0 !important;
+  margin: 0;
+}
+
+.form-card {
+  max-width: 550px;
+  border: 1px solid #e0e0e0;
+}
+
+/* Style pour le titre */
+.form-title {
+  font-weight: 700;
+  color: #003366;
+}
+
+/* Sous-titre */
+.form-header p {
+  font-size: 15px;
+  margin: 0;
+}
+
+/* Messages de retour */
+.custom-alert {
+  font-size: 14px;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.alert-success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.alert-danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+/* Input */
+.form-control {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  height: 45px;
+}
+
+/* Bouton d'envoi */
+button[type="submit"] {
+  background-color: #0056b3;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+button[type="submit"]:hover {
+  background-color: #004092;
+}

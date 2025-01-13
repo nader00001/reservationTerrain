@@ -1,0 +1,91 @@
+<!-- gymnasium-update.component.html -->
+<div class="container-fluid vh-100 d-flex align-items-center justify-content-center bg-light">
+  <div class="form-card p-5 shadow-lg bg-white rounded">
+    <!-- Messages de retour -->
+    <div *ngIf="successMessage" class="custom-alert alert-success mb-3 text-center">
+      <i class="bi bi-check-circle"></i> {{ successMessage }}
+    </div>
+    <div *ngIf="errorMessage" class="custom-alert alert-danger mb-3 text-center">
+      <i class="bi bi-exclamation-triangle"></i> {{ errorMessage }}
+    </div>
+
+    <!-- Titre du formulaire -->
+    <div class="form-header text-center mb-4">
+      <h2 class="form-title">Modifier un Gymnase</h2>
+      <p class="text-muted">Mettez à jour les informations du gymnase.</p>
+    </div>
+
+    <!-- Formulaire stylisé -->
+    <form (ngSubmit)="updateGymnasium()" class="form-container">
+      <div class="row">
+        <div class="col-12 mb-3">
+          <div class="form-group">
+            <label for="name" class="form-label">Nom :</label>
+            <input
+              [(ngModel)]="gymnasium.name"
+              name="name"
+              class="form-control shadow-sm"
+              id="name"
+              placeholder="Nom du gymnase"
+              required
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 mb-3">
+          <div class="form-group">
+            <label for="location" class="form-label">Localisation :</label>
+            <input
+              [(ngModel)]="gymnasium.location"
+              name="location"
+              class="form-control shadow-sm"
+              id="location"
+              placeholder="Localisation du gymnase"
+              required
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <div class="form-group">
+            <label for="capacity" class="form-label">Capacité :</label>
+            <input
+              [(ngModel)]="gymnasium.capacity"
+              name="capacity"
+              type="number"
+              class="form-control shadow-sm"
+              id="capacity"
+              placeholder="Capacité maximale"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <div class="form-group">
+            <label for="type" class="form-label">Type :</label>
+            <input
+              [(ngModel)]="gymnasium.type"
+              name="type"
+              class="form-control shadow-sm"
+              id="type"
+              placeholder="Type du gymnase"
+              required
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Bouton de soumission -->
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary btn-lg shadow-sm w-100">
+          <i class="bi bi-pencil-square"></i> Modifier
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

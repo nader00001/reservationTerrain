@@ -1,0 +1,50 @@
+<!-- Modal -->
+<app-terrain-modal
+  [terrain]="selectedTerrain!"
+  [showModal]="showModal"
+  (closeModal)="showModal = false"
+></app-terrain-modal>
+
+<!-- Tableau -->
+<table class="table table-hover table-bordered mt-3">
+  <thead class="table-dark">
+    <tr>
+      <th>Nom</th>
+      <th>Localisation</th>
+      <th>Capacité</th>
+      <th>Type</th>
+      <th style="width: 25%">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let terrain of terrains">
+      <td>{{ terrain.name }}</td>
+      <td>{{ terrain.location }}</td>
+      <td>{{ terrain.capacity }}</td>
+      <td>{{ terrain.type }}</td>
+      <td>
+        <button
+          class="btn btn-primary btn-sm me-2"
+          (click)="editTerrain(terrain.id)"
+          title="Modifier"
+        >
+          <i class="bi bi-pencil"></i> Modifier
+        </button>
+        <button
+          class="btn btn-danger btn-sm me-2"
+          (click)="deleteTerrain(terrain.id)"
+          title="Supprimer"
+        >
+          <i class="bi bi-trash"></i> Supprimer
+        </button>
+        <button
+          class="btn btn-info btn-sm"
+          (click)="viewDetails(terrain)"
+          title="Voir Détails"
+        >
+          <i class="bi bi-eye"></i> Voir Détails
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

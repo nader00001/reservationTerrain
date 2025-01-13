@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        #wrapper {
+            display: flex;
+            height: 100vh;
+        }
+
+        /* Sidebar styles */
+        #sidebar {
+            width: 250px;
+            background-color: #343a40;
+            color: white;
+            height: 100%;
+            position: fixed;
+            padding-top: 20px;
+        }
+        #sidebar h3 {
+            text-align: center;
+            color: #ffffff;
+        }
+        #sidebar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            display: block;
+            padding: 12px 20px;
+            border-bottom: 1px solid #444;
+        }
+        #sidebar a:hover {
+            background-color: #007bff;
+        }
+
+        /* Dropdown menu for Terrain and Gymnasium */
+        #sidebar .submenu {
+            display: none;
+            padding-left: 20px;
+        }
+        #sidebar .menu-item input[type="checkbox"]:checked + label + .submenu {
+            display: block;
+        }
+        #sidebar label {
+            cursor: pointer;
+            padding: 12px 20px;
+            font-size: 18px;
+            display: block;
+        }
+        #sidebar label:hover {
+            background-color: #007bff;
+        }
+
+        /* Page Content styles */
+        #content {
+            margin-left: 250px;
+            padding: 20px;
+            width: 100%;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #343a40;
+            color: white;
+            padding: 15px;
+        }
+
+        .navbar a {
+            color: white;
+            font-size: 24px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<div id="wrapper">
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <h3>Admin Dashboard</h3>
+
+        <!-- Menu Terrain -->
+        <div class="menu-item">
+            <input type="checkbox" id="terrain-toggle">
+            <label for="terrain-toggle">
+                <i class="fa fa-search"></i> Terrain <i class="fa fa-angle-down float-right"></i>
+            </label>
+            <div class="submenu">
+                <a href="liste-terrain">Liste Terrain</a>
+                <a href="TerrainCreation">Créer Terrain</a>
+                <a href="ReservationTerrain">Liste reservation Terrain</a>
+
+            </div>
+        </div>
+
+        <!-- Menu Gymnasium -->
+        <div class="menu-item">
+            <input type="checkbox" id="gymnasium-toggle">
+            <label for="gymnasium-toggle">
+                <i class="fa fa-futbol"></i> Gymnasium <i class="fa fa-angle-down float-right"></i>
+            </label>
+            <div class="submenu">
+                <a href="ListeGymnasium">Liste Gymnasium</a>
+                <a href="Gymnasium">Créer Gymnasium</a>
+                <a href="reservation-gym">liste reservation Gymnasium</a>
+
+
+            </div>
+        </div>
+
+        <!-- Additional menu items can go here -->
+
+    </div>
+
+    <!-- Page Content -->
+    <div id="content">
+        <div class="navbar">
+            <a href="#">Admin Dashboard</a>
+        </div>
+
+        <h1>Welcome to the Admin Dashboard</h1>
+        <p>Manage your platform efficiently from this control panel.</p>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5>Statistics</h5>
+                        <p>Manage Terrain and Gymnasium details here.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

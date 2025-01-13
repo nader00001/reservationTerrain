@@ -1,0 +1,80 @@
+/* Global Styles */
+.title {
+  color: #007bff; /* Bleu */
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+}
+
+/* Alertes personnalisées */
+.custom-alert {
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.custom-alert .btn-close {
+  opacity: 0.8;
+}
+
+.custom-alert .btn-close:hover {
+  opacity: 1;
+}
+
+/* Alertes d'info */
+.custom-info {
+  background-color: #d1ecf1;
+  color: #0c5460;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+/* Liste des gymnases */
+.gymnasium-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.gymnasium-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.gymnasium-details {
+  max-width: 75%;
+}
+
+.gymnasium-name {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.gymnasium-location {
+  color: #6c757d;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Bouton supprimer */
+.btn-delete {
+  background-color: #dc3545;
+  border: none;
+  transition: background-color 0.3s ease;
+  border-radius: 4px;
+}
+
+.btn-delete:hover {
+  background-color: #c82333;
+}
+
+.btn-delete i {
+  margin-right: 5px;
+}

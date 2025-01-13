@@ -1,0 +1,48 @@
+<div class="container mt-5">
+  <h2 class="mb-4 text-center title">Liste des Gymnases</h2>
+
+  <!-- Messages d'erreur et de succès -->
+  <div *ngIf="errorMessage" class="alert alert-danger alert-dismissible fade show custom-alert" role="alert">
+    {{ errorMessage }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  <div *ngIf="successMessage" class="alert alert-success alert-dismissible fade show custom-alert" role="alert">
+    {{ successMessage }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+
+  <!-- Si la liste des gymnases est vide -->
+  <div *ngIf="gymnasiums && gymnasiums.length === 0" class="alert alert-info text-center custom-info">
+    Aucun gymnase trouvé.
+  </div>
+
+  <!-- Liste des gymnases -->
+  <div *ngIf="gymnasiums && gymnasiums.length > 0">
+    <ul class="list-group">
+      <li *ngFor="let gymnasium of gymnasiums" class="list-group-item gymnasium-item">
+        <div class="gymnasium-details">
+          <h5 class="gymnasium-name">{{ gymnasium.name }}</h5>
+          <p class="gymnasium-location">{{ gymnasium.location }} - {{ gymnasium.capacity }} places</p>
+        </div>
+
+        <!-- Boutons d'action -->
+        <button class="btn btn-primary btn-sm me-2" (click)="editGymnasium(gymnasium.id)" title="Modifier">
+          <i class="bi bi-pencil"></i> Modifier
+        </button>
+        <button class="btn btn-danger btn-sm btn-delete" (click)="deleteGymnasium(gymnasium.id)">
+          <i class="bi bi-trash"></i> Supprimer
+        </button>
+        <button class="btn btn-info btn-sm" (click)="viewDetails(gymnasium)" title="Voir Détails">
+          <i class="bi bi-eye"></i> Voir Détails
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Modal des détails -->
+  <app-gymnasium-modal
+    *ngIf="showModal"
+    [terrain]="selectedGymnasium"
+    (closeModal)="showModal = false">
+  </app-gymnasium-modal>
+</div>

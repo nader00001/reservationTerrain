@@ -1,0 +1,34 @@
+<div class="container">
+  <h2>Réservations des Terrains</h2>
+
+  <!-- Affichage des messages -->
+  <p *ngIf="success" class="text-success">{{ success }}</p>
+  <p *ngIf="error" class="text-danger">{{ error }}</p>
+
+  <!-- Affichage si aucune réservation -->
+  <p *ngIf="!error && reservations.length === 0">Aucune réservation trouvée.</p>
+
+  <!-- Tableau des réservations -->
+  <table *ngIf="reservations.length > 0" class="table table-bordered">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nom du Terrain</th>
+        <th>Date de début</th>
+        <th>Date de fin</th>
+        <th>Réservé par</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let reservation of reservations">
+        <td>{{ reservation.id }}</td>
+        <td>{{ reservation.terrain?.name }}</td>
+        <td>{{ reservation.startDate | date: 'dd/MM/yyyy HH:mm' }}</td>
+        <td>{{ reservation.endDate | date: 'dd/MM/yyyy HH:mm' }}</td>
+        <td>{{ reservation.reservedBy }}</td>
+       
+      </tr>
+    </tbody>
+  </table>
+</div>

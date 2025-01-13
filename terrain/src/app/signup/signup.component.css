@@ -1,0 +1,86 @@
+/* Global styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-image: url('https://example.com/terrain.jpg'); /* Remplacez par l'URL de votre image */
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* L'élément body occupe toute la hauteur de l'écran */
+  display: flex;
+  justify-content: center; /* Centre le formulaire horizontalement */
+  align-items: center; /* Centre le formulaire verticalement */
+}
+
+.signup-form {
+  margin-top: 4%;
+  margin-left: 35%;
+  background: rgba(255, 255, 255, 0.9); /* Fond blanc semi-transparent */
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 400px; /* Largeur maximale du formulaire */
+  width: 100%; /* Largeur adaptative */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre douce autour du formulaire */
+}
+
+.form-group {
+  margin-bottom: 20px; /* Marge entre chaque champ */
+}
+
+label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input.form-control {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease;
+}
+
+input.form-control:focus {
+  border-color: #007bff; /* Changer la couleur de la bordure en bleu */
+  outline: none;
+}
+
+button.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff; /* Couleur du bouton */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.submit-btn:hover {
+  background-color: #0056b3; /* Couleur du bouton au survol */
+}
+
+button.submit-btn:active {
+  background-color: #004085; /* Couleur du bouton lors du clic */
+}
+
+p.text-center {
+  text-align: center;
+  margin-top: 20px;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

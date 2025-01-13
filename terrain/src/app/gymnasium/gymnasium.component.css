@@ -1,0 +1,99 @@
+/* Conteneur principal */
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+/* Card du formulaire */
+.form-card {
+  max-width: 500px;
+  width: 100%;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.form-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Titre */
+h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+/* Labels */
+label.form-label {
+  font-weight: 600;
+  font-size: 14px;
+  color: #555;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+/* Inputs */
+input.form-control {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  padding: 12px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.4);
+}
+
+/* Champs invalides */
+input.is-invalid {
+  border-color: #e74c3c;
+  background-color: #fbe3e4;
+}
+
+/* Boutons */
+button.btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Messages de validation */
+.alert {
+  border-radius: 8px;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.alert-success {
+  color: #155724;
+  background: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.alert-danger {
+  color: #721c24;
+  background: #f8d7da;
+  border-color: #f5c6cb;
+}

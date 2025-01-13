@@ -1,0 +1,38 @@
+<div class="container">
+  <form class="reservation-form" (ngSubmit)="onSubmit()">
+    <h2 class="form-title">Réserver un gymnase</h2>
+
+    <div class="form-group">
+      <label for="gymnasium">Gymnase :</label>
+      <select id="gymnasium" [(ngModel)]="reservation.gymnasium.id" name="gymnasium" required>
+        <option *ngFor="let gymnasium of gymnasiums" [value]="gymnasium.id">{{ gymnasium.name }}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="date">Date de réservation :</label>
+      <input id="date" [(ngModel)]="reservation.date" name="date" type="date" required />
+    </div>
+
+    <div class="form-group">
+      <label for="time">Heure de début :</label>
+      <input id="time" [(ngModel)]="reservation.time" name="time" type="time" required />
+    </div>
+
+    <div class="form-group">
+      <label for="endTime">Heure de fin :</label>
+      <input id="endTime" [(ngModel)]="reservation.endTime" name="endTime" type="time" required />
+    </div>
+
+    <div class="form-group">
+      <label for="reservedBy">Réservé par :</label>
+      <input id="reservedBy" [(ngModel)]="reservation.reservedBy" name="reservedBy" type="text" />
+    </div>
+
+    <button type="submit" class="submit-btn">Réserver</button>
+  </form>
+
+  <!-- Messages d'information après le formulaire -->
+  <div *ngIf="message" class="message success">{{ message }}</div>
+  <div *ngIf="error" class="message error">{{ error }}</div>
+</div>
